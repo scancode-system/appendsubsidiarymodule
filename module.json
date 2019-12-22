@@ -1,0 +1,14 @@
+{
+    "name": "AppendSubsidiary",
+    "alias": "appendsubsidiary",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\AppendSubsidiary\\Providers\\AppendSubsidiaryServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

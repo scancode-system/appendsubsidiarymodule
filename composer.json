@@ -1,0 +1,26 @@
+{
+    "name": "scancode/append-subsidiary-module",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\AppendSubsidiary\\Providers\\AppendSubsidiaryServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\AppendSubsidiary\\": ""
+        }
+    },
+    "type": "laravel-module"
+}
