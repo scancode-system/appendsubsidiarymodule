@@ -8,6 +8,16 @@ use Illuminate\Database\Eloquent\Factory;
 class AppendSubsidiaryServiceProvider extends ServiceProvider
 {
     /**
+     * @var string $moduleName
+     */
+    protected $moduleName = 'AppendSubsidiary';
+
+    /**
+     * @var string $moduleNameLower
+     */
+    protected $moduleNameLower = 'appendsubsidiary';
+
+    /**
      * Boot the application events.
      *
      * @return void
@@ -36,11 +46,18 @@ class AppendSubsidiaryServiceProvider extends ServiceProvider
     protected function registerConfig()
     {
         $this->publishes([
+            module_path($this->moduleName, 'Config/config.php') => config_path($this->moduleNameLower . '.php'),
+        ], 'config');
+        $this->mergeConfigFrom(
+            module_path($this->moduleName, 'Config/config.php'), $this->moduleNameLower
+        );
+        
+        /*$this->publishes([
             __DIR__.'/../Config/config.php' => config_path('appendsubsidiary.php'),
         ], 'config');
         $this->mergeConfigFrom(
             __DIR__.'/../Config/config.php', 'appendsubsidiary'
-        );
+        );*/
     }
 
 
