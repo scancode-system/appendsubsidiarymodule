@@ -18,13 +18,13 @@ class InfoService extends InfoValidationService
 		];
 	}
 
-	public function modifiers()
+	public function modifiers($data)
 	{
 		return [];
 	}
 
 
-	public function columnsFormat()
+	public function columnsFormat($header)
 	{
 		return  [];
 	}
